@@ -205,8 +205,8 @@ main {
 .container h2 {
   background: var(--clr-black);
   color: var(--clr-white);
-  padding: 1rem;
-  border-radius: var(--radius);
+  padding: 2rem;
+  border-radius: 10px;
   margin-bottom: 2.5rem;
 }
 .color {
@@ -224,7 +224,7 @@ main {
   border: 2px solid var(--clr-black);
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: var(--radius);
+  border-radius: 25px;
   font-size: 1rem;
   padding: 0.75rem 1.25rem;
 }
