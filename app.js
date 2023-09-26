@@ -1,56 +1,57 @@
+// const colors = [
+//   "#FFFFFF",
+//   "#000000",
+//   "#FF0000",
+//   "#00FF00",
+//   "#0000FF",
+//   "#FFFF00",
+//   "#FF00FF",
+//   "#00FFFF",
+//   "#C0C0C0",
+//   "#808080",
+//   "#800000",
+//   "#808000",
+//   "#008000",
+//   "#800080",
+//   "#008080",
+//   "#FFA500",
+//   "#A52A2A",
+//   "#DEB887",
+//   "#5F9EA0",
+//   "#7FFF00",
+//   "#D2691E",
+//   "#FF7F50",
+//   "#6495ED",
+//   "#DC143C",
+//   "#00FFFF",
+//   "#8A2BE2",
+//   "#FFD700",
+//   "#D8BFD8",
+//   "#FF6347",
+//   "#40E0D0",
+//   "#EE82EE",
+//   "#F5DEB3",
+//   "#F0E68C",
+//   "#ADFF2F",
+//   "#FFDAB9",
+//   "#CD5C5C",
+//   "#4B0082",
+//   "#FFFFF0",
+//   "#F0FFF0",
+//   "#FF69B4",
+//   "#CD853F",
+//   "#FF4500",
+//   "#DA70D6",
+//   "#EEE8AA",
+//   "#98FB98",
+//   "#AFEEEE",
+//   "#DB7093",
+//   "#FFEFD5",
+//   "#FFDAB9",
+//   "#B0E0E6",
+// ];
+//array of color objects, including hexadecimal value and color name.
 const colors = [
-  "#FFFFFF",
-  "#000000",
-  "#FF0000",
-  "#00FF00",
-  "#0000FF",
-  "#FFFF00",
-  "#FF00FF",
-  "#00FFFF",
-  "#C0C0C0",
-  "#808080",
-  "#800000",
-  "#808000",
-  "#008000",
-  "#800080",
-  "#008080",
-  "#FFA500",
-  "#A52A2A",
-  "#DEB887",
-  "#5F9EA0",
-  "#7FFF00",
-  "#D2691E",
-  "#FF7F50",
-  "#6495ED",
-  "#DC143C",
-  "#00FFFF",
-  "#8A2BE2",
-  "#FFD700",
-  "#D8BFD8",
-  "#FF6347",
-  "#40E0D0",
-  "#EE82EE",
-  "#F5DEB3",
-  "#F0E68C",
-  "#ADFF2F",
-  "#FFDAB9",
-  "#CD5C5C",
-  "#4B0082",
-  "#FFFFF0",
-  "#F0FFF0",
-  "#FF69B4",
-  "#CD853F",
-  "#FF4500",
-  "#DA70D6",
-  "#EEE8AA",
-  "#98FB98",
-  "#AFEEEE",
-  "#DB7093",
-  "#FFEFD5",
-  "#FFDAB9",
-  "#B0E0E6",
-];
-const colors2 = [
   { hex: "#FFFFFF", name: "White" },
   { hex: "#000000", name: "Black" },
   { hex: "#FF0000", name: "Red" },
@@ -104,13 +105,16 @@ const colors2 = [
 ];
 const btn = document.getElementById("btn");
 const color = document.querySelector(".color");
+//when clicked
 btn.addEventListener("click", function () {
-  //get random number between 0 - 3 colors[0];
+
   const randomNumber = getRandomNumber();
   console.log(randomNumber);
-  document.body.style.backgroundColor = colors2[randomNumber].hex;
-  color.textContent = colors2[randomNumber].name;
+  document.body.style.backgroundColor = colors[randomNumber].hex;
+  color.textContent = colors[randomNumber].name;
 });
+//get random number between 0 - colors.length;
+//this makes the colors dynamic.
 function getRandomNumber() {
   return Math.floor(Math.random() * colors.length);
 }

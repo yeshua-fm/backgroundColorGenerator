@@ -4,6 +4,8 @@ const btn = document.getElementById("btn");
 const color = document.querySelector(".color");
 async function getColors(hexColor) {
   const response = await fetch(
+    //pulls data from the color api
+    //variable hexColor is generated using the above hexadecimal array.
     `https://www.thecolorapi.com/id?hex=${hexColor}&format=json`
   );
   const colors = await response.json();
@@ -18,6 +20,7 @@ btn.addEventListener("click", async function () {
   color.textContent = hexColorName;
   document.body.style.backgroundColor = hexColor;
 });
+//generates a random hex value by looping through the array 6 times and concantenating it to the end of the hexColor variable
 const getHexColor = function () {
   let hexColor = "";
   for (let i = 0; i < 6; i++) {
@@ -25,6 +28,7 @@ const getHexColor = function () {
   }
   return hexColor;
 };
+//chooses a random index so that the value is random for each part of the hexColor variable.
 function getRandomNumber() {
   return Math.floor(Math.random() * hex.length);
 }
